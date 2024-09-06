@@ -1,0 +1,24 @@
+.logo{
+    height: 50px;
+    margin-right: 15px;
+}
+.navbar-brand{
+    font-weight: 600;
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.container-fluid{
+    background-color: #20cd8d;
+    height: 75px;
+}
+.nav-icon{
+    height: 30px;
+    padding: 4px;
+    margin-right: 5px; 
+}
+.nav-link{
+    color: #046b46;
+    font-weight:400;
+    font-size: 20px;
+}
