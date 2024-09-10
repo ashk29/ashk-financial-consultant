@@ -1,0 +1,11 @@
+.btn{
+    border-radius: 5rem;
+    width: 20rem;
+    background-color: #20cd8d;
+    text-align: center;
+    font-size: large;
+    font-weight: 500;
+}
+.btn:hover{
+    background-color: #20cd8d;
+}
