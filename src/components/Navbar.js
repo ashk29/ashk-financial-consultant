@@ -2,11 +2,18 @@ import React from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
+  // const NavIcons = [
+  //   "icons/whatsapp.png",
+  //   "icons/phone-call.png",
+  //   "icons/mail.png",
+  //   "icons/google-forms.png",
+  // ];
+
   const NavIcons = [
-    "icons/whatsapp.png",
-    "icons/phone-call.png",
-    "icons/mail.png",
-    "icons/google-forms.png",
+    "icons/black/whatsapp.png",
+    "icons/black/phone-call.png",
+    "icons/black/mail.png",
+    "icons/black/google-forms.png",
   ];
   const NavTexts = ["Whatsapp", "Call", "E-Mail", "Form"];
   const NavLinks = [

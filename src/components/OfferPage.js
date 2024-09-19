@@ -11,7 +11,7 @@ export default function OfferPage() {
   return (
     <>
       <hr className="page-line"></hr>
-          <h2>What I Offer</h2>
+          <h2 className="page-heading">What I Offer</h2>
           
           <div className="offer-container">
               <OfferBox className="offer-btn" offerText={offeringsText[0]} />

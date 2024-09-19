@@ -1,0 +1,42 @@
+.btn{
+    border-radius: 5rem;
+    width: 20rem;
+    background-color: #20cd8d;
+    text-align: center;
+    font-size: large;
+    font-weight: 500;
+}
+.btn:hover{
+    background-color: #20cd8d;
+}
+
+.why-banner-container{
+    background-color: #20cd8d;
+    border-radius: 3rem;
+    width: 30rem;
+    height: 20rem;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.why-image{
+    width: 16rem;
+    height: 16rem;
+    border-radius: 2rem;
+}
+
+
+/* .scroll-item {
+    display: inline-block;
+    min-width: 150px; 
+    margin-right: 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+} */
