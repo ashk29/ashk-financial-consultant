@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ashk-financial-consultant/static/css/main.e5f54809.chunk.css",
+    "main.js": "/ashk-financial-consultant/static/js/main.3b73af4f.chunk.js",
+    "main.js.map": "/ashk-financial-consultant/static/js/main.3b73af4f.chunk.js.map",
+    "runtime~main.js": "/ashk-financial-consultant/static/js/runtime~main.70b19e9f.js",
+    "runtime~main.js.map": "/ashk-financial-consultant/static/js/runtime~main.70b19e9f.js.map",
+    "static/js/2.990dd9f0.chunk.js": "/ashk-financial-consultant/static/js/2.990dd9f0.chunk.js",
+    "static/js/2.990dd9f0.chunk.js.map": "/ashk-financial-consultant/static/js/2.990dd9f0.chunk.js.map",
+    "index.html": "/ashk-financial-consultant/index.html",
+    "precache-manifest.5096bc57ce68a84ac86c95bf152e82c0.js": "/ashk-financial-consultant/precache-manifest.5096bc57ce68a84ac86c95bf152e82c0.js",
+    "service-worker.js": "/ashk-financial-consultant/service-worker.js",
+    "static/css/main.e5f54809.chunk.css.map": "/ashk-financial-consultant/static/css/main.e5f54809.chunk.css.map"
+  }
+}
