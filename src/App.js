@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import IntroPage from './components/IntroPage';
 import OfferPage from './components/OfferPage';
 import WhyPage from './components/WhyPage';
+import Videos from './components/VideoPage';
 
 function App() {
   return (
@@ -11,8 +12,8 @@ function App() {
     <Navbar />
       <IntroPage />
       <OfferPage />
-      <WhyPage/>
-      
+      <WhyPage />
+      <Videos/>
       </>
   );
 }
@@ -21,6 +22,3 @@ export default App;
 
 
 
-// Idea: use popup to display some details when clicked on what I Offer links
-// e: if clikced on Life insurance - show ABSLI cert
-// if clicked on dmat account, provide info like - when opened account with me, you'll get tips.
