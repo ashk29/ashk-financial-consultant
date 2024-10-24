@@ -1,0 +1,26 @@
+.heading-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* Contacts CSS */
+.contact-icons {
+  height: 2rem;
+  padding: 0.2rem;
+  margin-right: 1rem;
+}
+
+/* Life insurance */
+.life-insurance-body-container {
+  display: flex;
+  align-items: center;
+  gap: 15rem;
+}
+.absli-cert {
+  height: 10rem;
+}
+.absli-cert:hover {
+  transform: scale(2);
+  transition: transform 0.3s ease;
+}

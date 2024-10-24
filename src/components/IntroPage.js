@@ -23,7 +23,7 @@ export default function IntroPage() {
         <a href="https://wa.me/+918819080000?text=Hi">
           <button type="button" class="chat-btn">
             Let's Chat
-            <img src="icons/whatsapp.png" className="btn-whatsapp"></img>
+            <img src="icons/green/whatsapp.png" className="btn-whatsapp"></img>
           </button>
         </a>
       </div>

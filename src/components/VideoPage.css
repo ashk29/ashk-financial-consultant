@@ -1,16 +1,16 @@
-.video-page-container{
-    width: 100%;
+.video-page-container {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
   gap: 2rem;
-  margin-left: 5rem;   
+  margin-left: 5rem;
 }
 
-.video{
-    width: 500px;
-    height: 280px;
-    background-color: grey;
-    border-radius: 10px;
-    
+.video {
+  width: 500px;
+  height: 280px;
+  background-color: grey;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
 }
