@@ -1,9 +1,11 @@
 import React from "react";
 import "./Popup.css";
-import HealthInsurance from "../offering_components/HealthInsurance";
-import LifeInsurance from "../offering_components/LifeInsurance";
+import { useContext } from "react";
+import { PageName } from "./OfferBox";
+import RenderComponent from "../offering_components/RenderComponent";
 
 const Popup = ({ trigger, setTrigger }) => {
+  const page = useContext(PageName);
   if (!trigger) return null;
 
   return (
@@ -12,8 +14,7 @@ const Popup = ({ trigger, setTrigger }) => {
         <button className="close-btn" onClick={() => setTrigger(false)}>
           &times;
         </button>
-        {/* <HealthInsurance /> */}
-        <LifeInsurance />
+        <RenderComponent componentName={page} />
       </div>
     </div>
   );

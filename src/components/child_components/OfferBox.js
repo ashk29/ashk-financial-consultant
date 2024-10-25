@@ -1,19 +1,22 @@
-import React from "react";
+import React, { createContext, useState } from "react";
 import "./ChildComponents.css";
 import Popup from "./Popup";
-import { useState } from "react";
+
+export const PageName = createContext();
 
 const OfferBox = ({ offerText }) => {
   const [popupVisible, setPopupVisible] = useState(false);
-    const togglePopup = () => {
-        setPopupVisible(!popupVisible);
-      };
+  const togglePopup = () => {
+    setPopupVisible(!popupVisible);
+  };
   return (
     <>
       <button className="btn" onClick={togglePopup}>
         {offerText}
       </button>
-      <Popup trigger={popupVisible} setTrigger={setPopupVisible} />
+      <PageName.Provider value={offerText}>
+        <Popup trigger={popupVisible} setTrigger={setPopupVisible} />
+      </PageName.Provider>
     </>
   );
 };

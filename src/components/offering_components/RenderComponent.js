@@ -1,12 +1,13 @@
 import React from "react";
 import HealthInsurance from "./HealthInsurance";
 import LifeInsurance from "./LifeInsurance";
+import { Offerings } from "../OfferPage";
 
 const RenderComponent = ({ componentName }) => {
   switch (componentName) {
-    case "health_insurance":
+    case Offerings.HEALTH_INSURANCE:
       return <HealthInsurance />;
-    case "life_insurance":
+    case Offerings.TERM_INSURANCE:
       return <LifeInsurance />;
   }
 };
