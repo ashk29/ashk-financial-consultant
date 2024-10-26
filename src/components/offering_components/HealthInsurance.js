@@ -6,7 +6,7 @@ function HealthInsurance() {
   return (
     <>
       <div className="heading-container">
-        <img src="icons/logos/start_health_logo.png"></img>
+        <img src="icons/logos/start_health_logo.png" className="popup-icon"></img>
         <h1>Health Insurance</h1>
       </div>
       <p>

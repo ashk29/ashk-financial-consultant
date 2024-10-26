@@ -21,18 +21,18 @@ export default function OfferPage() {
       <h2 className="page-heading">What I Offer</h2>
 
       <div className="offer-container">
-        <OfferBox className="offer-btn" offerText={offeringsText[0]} />
-        <OfferBox className="offer-btn" offerText={offeringsText[1]} />
+        <OfferBox offerText={offeringsText[0]} />
+        <OfferBox offerText={offeringsText[1]} />
       </div>
       <div className="offer-container">
-        <OfferBox className="offer-btn" offerText={offeringsText[2]} />
+        <OfferBox offerText={offeringsText[2]} />
       </div>
       <div className="offer-container">
-        <OfferBox className="offer-btn" offerText={offeringsText[3]} />
-        <OfferBox className="offer-btn" offerText={offeringsText[4]} />
+        <OfferBox offerText={offeringsText[3]} />
+        <OfferBox offerText={offeringsText[4]} />
       </div>
       <div className="offer-container">
-        <OfferBox className="offer-btn" offerText={offeringsText[5]} />
+        <OfferBox offerText={offeringsText[5]} />
       </div>
     </>
   );

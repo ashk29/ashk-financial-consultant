@@ -7,9 +7,7 @@ function LifeInsurance() {
     <>
       <div className="heading-container">
         <img
-          src="icons/logos/aditya_birla_logo.png"
-          style={{ height: "4rem" }}
-        ></img>
+          src="icons/logos/aditya_birla_logo.webp" className="popup-icon"></img>
         <h1 style={{ margin: 0 }}>Life Insurance</h1>
       </div>
       <p>
