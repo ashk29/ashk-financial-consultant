@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/ashk-financial-consultant/precache-manifest.3795fa2c408e9d65d59d3bbae05a3e1c.js"
+  "/ashk-financial-consultant/precache-manifest.64f765d314306c4a33d95b9b7e399415.js"
 );
 
 self.addEventListener('message', (event) => {
