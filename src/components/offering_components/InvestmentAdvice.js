@@ -1,5 +1,6 @@
 import React from "react";
 import Contacts from "./Contacts";
+import "./Offerings.css";
 
 function InvestmentAdvice() {
   return (

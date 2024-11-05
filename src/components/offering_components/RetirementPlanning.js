@@ -1,11 +1,11 @@
 import React from "react";
 import Contacts from "./Contacts";
+import "./Offerings.css";
 
 function RetirementPlanning() {
   return (
     <>
       <div className="heading-container">
-        {/* <img src="icons/logos/old_man.png" className="popup-image" style={{height:'10rem', width:'10rem'}}></img> */}
         <img src="icons/logos/retired_man_pencil.webp" className="popup-image"></img>
         <h1>Retirement Planning</h1>
       </div>

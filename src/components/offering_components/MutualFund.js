@@ -1,12 +1,12 @@
 import React from "react";
 import Contacts from "./Contacts";
 import MFLogos from "./MFLogos";
+import "./Offerings.css";
 
 function MutualFund() {
   return (
     <>
       <div className="heading-container">
-        {/* <img src="icons/logos/old_man.png" className="popup-image" style={{height:'10rem', width:'10rem'}}></img> */}
         <img src="icons/logos/mutual_fund.webp" className="popup-image"></img>
         <h1>Mutual Funds</h1>
       </div>
