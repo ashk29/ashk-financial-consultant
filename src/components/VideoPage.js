@@ -1,25 +1,33 @@
 import React from "react";
 import "./VideoPage.css";
 
-const VideoList = ["videos/birla_insurance.mp4",
-    "videos/insurance.mp4", "videos/star_insurance.mp4"
+const VideoList = [
+  "videos/SIP.mp4",
+  "videos/birla_insurance.mp4",
+  "videos/insurance.mp4",
+  "videos/star_insurance.mp4",
+  "videos/investment_secret.mp4",
+];
+
+const VideoTxt = ["What is SIP ? Let us understand", "Learn from Sunil Chhetri",
+    "Haan, mai insurance bechta hu.", "Right time to buy insurance.", "Investment secret you don't know."
 ]
 
 export default function Videos() {
-    return (
-        <>
-            <hr className="page-line"></hr>
-            <h2 className="page-heading"> Videos</h2>
-            <div className="video-page-container">
+  return (
+    <>
+      <hr className="page-line"></hr>
+      <h2 className="page-heading"> Videos</h2>
+      <div className="video-page-container">
         {VideoList.map((video, index) => (
-            //   <WhyBanner img_path={image} img_txt={BannerText[index]} />
+          <div className="video-container">
             <video className="video" controls>
-                <source src={video} type="video/mp4"/>
-    Your browser does not support the video tag.
-  </video>
+              <source src={video} type="video/mp4" />
+                </video>
+                <h3 style={{marginBottom:'2rem'}}>{VideoTxt[index]}</h3>
+          </div>
         ))}
       </div>
-
-        </>
-    );
+    </>
+  );
 }

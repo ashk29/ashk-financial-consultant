@@ -1,0 +1,92 @@
+.popup-icon {
+  height: 7rem;
+  width: 15rem;
+}
+h1{
+  margin: 0;
+}
+
+.popup-image {
+  height: 7rem;
+  width: 12rem;
+  /* opacity: 0.8; */
+  border-radius: 1rem;
+}
+
+.heading-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* Contacts CSS */
+.contact-icons {
+  height: 2rem;
+  padding: 0.2rem;
+  margin-right: 1rem;
+}
+
+/* Life insurance */
+.life-insurance-body-container {
+  display: flex;
+  align-items: center;
+  gap: 15rem;
+}
+.absli-cert {
+  height: 10rem;
+}
+.absli-cert:hover {
+  transform: scale(2);
+  transition: transform 0.3s ease;
+}
+
+/* MF Logos */
+.random-image-container {
+  position: relative;
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  /* justify-content: center; */
+  padding: 1rem;
+}
+
+.random-image {
+  display: inline;
+  width: 5rem;
+  height: 3rem;
+  border-radius: 8px;
+  margin-left: 5rem;
+  transition: transform 0.3s;
+}
+
+.random-image:hover {
+  transform: scale(1.3);
+}
+
+.arrow-icon{
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-left: 1rem;
+}
+
+.dmat-txt{
+  text-decoration: none;
+  color: #046b46;
+  font-size: large;
+  font-weight: 600;
+}
+
+
+.aligned-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  padding-left: 0rem;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.aligned-list li {
+  display: list-item;
+  margin: 0.5rem;
+}
