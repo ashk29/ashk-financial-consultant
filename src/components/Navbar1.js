@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Navbar1.css";
+import { useState } from "react";
 
 export default function Navbar1() {
   const NavIcons = [
@@ -16,10 +17,15 @@ export default function Navbar1() {
     "https://docs.google.com/forms/d/1xTTU3xv4y0BPYgRKYiHnY8__aJvGsPQO13UKEZ9of8k/edit",
   ];
 
-  const lp = false;
-  const isLaptop = lp;
-  // const isBigScreen = useMediaQuery({ query: '(min-width: 1824px)' })
-  const isMobile = !lp;
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="header">
@@ -35,7 +41,16 @@ export default function Navbar1() {
           <div className={isMobile ? "navs-mob" : "navs"}>
             {NavIcons.map((navIcon, idx) => (
               <div className="nav-item" key={"navItem-" + idx}>
-                {isLaptop ? (
+                {isMobile ? (
+                  <a href={NavLinks[idx]}>
+                    <img
+                      src={navIcon}
+                      alt="phone"
+                      className="icons"
+                      key={"navLink-" + idx}
+                    />
+                  </a>
+                ) : (
                   <>
                     <img
                       src={navIcon}
@@ -53,15 +68,6 @@ export default function Navbar1() {
                       {NavTexts[idx]}
                     </a>
                   </>
-                ) : (
-                  <a href={NavLinks[idx]}>
-                    <img
-                      src={navIcon}
-                      alt="phone"
-                      className="icons"
-                      key={"navLink-" + idx}
-                    />
-                  </a>
                 )}
               </div>
             ))}
