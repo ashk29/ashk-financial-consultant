@@ -2,12 +2,6 @@ import React from "react";
 import "./Navbar.css";
 
 export default function Navbar() {
-  // const NavIcons = [
-  //   "icons/whatsapp.png",
-  //   "icons/phone-call.png",
-  //   "icons/mail.png",
-  //   "icons/google-forms.png",
-  // ];
 
   const NavIcons = [
     "icons/black/whatsapp.png",
@@ -28,11 +22,14 @@ export default function Navbar() {
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             <img
-              src="icons/rupee.png"
+              src="icons/icon.png"
               className="d-inline-block align-text-top logo"
+              alt="Logo"
             />
             KHANDELWAL
+            <div>Consultancy</div>
           </a>
+          
           <ul className="nav justify-content-end">
             {NavIcons.map((navItem, index) => (
               <li className="nav-item">
