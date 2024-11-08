@@ -15,10 +15,14 @@ function MutualFund() {
         professional management and diversified portfolios, mutual funds are a
         smart way to invest. Enjoy the potential for long-term growth,
         liquidity, and flexibility. Start your investment journey today and
-        watch your wealth grow effortlessly over time. Hundreds of mutual funds to choose from:
+        watch your wealth grow effortlessly over time. Hundreds of mutual funds
+        to choose from:
       </p>
-      <MFLogos/>
-      <p>Contact Me to Explore Plans</p>
+      <MFLogos />
+      <p>
+        <br />
+        Contact Me to Explore Plans
+      </p>
       <Contacts />
     </>
   );

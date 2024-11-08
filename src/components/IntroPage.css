@@ -68,12 +68,12 @@
 
   .profile-image {
     width: 70%;
+    height: auto;
     margin-bottom: 20px;
-    order: 1;
   }
 
   .txt-container {
     width: 100%;
-    order: 1;
+    margin-left: 0;
   }
 }

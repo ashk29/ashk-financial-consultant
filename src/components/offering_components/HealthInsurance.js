@@ -6,7 +6,10 @@ function HealthInsurance() {
   return (
     <>
       <div className="heading-container">
-        <img src="icons/logos/start_health_logo.png" className="popup-icon"></img>
+        <img
+          src="icons/logos/start_health_logo.png"
+          className="popup-icon"
+        ></img>
         <h1>Health Insurance</h1>
       </div>
       <p>
@@ -27,7 +30,10 @@ function HealthInsurance() {
           it.
         </strong>
       </p>
-      <p>Contact Me to Explore Plans</p>
+      <p>
+        <br />
+        Contact Me to Explore Plans
+      </p>
       <Contacts />
     </>
   );

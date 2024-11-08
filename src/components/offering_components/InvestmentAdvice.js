@@ -32,8 +32,11 @@ function InvestmentAdvice() {
         together to turn your financial dreams into reality with a solid,
         effective investment strategy.
       </p>
-      <p>Lets Plan</p>
-      <Contacts/>
+      <p>
+        <br />
+        Lets Plan
+      </p>
+      <Contacts />
     </>
   );
 }
