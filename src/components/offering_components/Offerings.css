@@ -1,14 +1,14 @@
 .popup-icon {
-  height: 7rem;
-  width: 15rem;
+  height: 112px;
+  width: 240px;
 }
 h1{
   margin: 0;
 }
 
 .popup-image {
-  height: 7rem;
-  width: 12rem;
+  height: 112px;
+  width: 192px;
   /* opacity: 0.8; */
   border-radius: 1rem;
 }
@@ -17,6 +17,7 @@ h1{
   display: flex;
   align-items: center;
   gap: 4rem;
+  margin-bottom:25px;
 }
 
 /* Contacts CSS */
@@ -89,4 +90,41 @@ h1{
 .aligned-list li {
   display: list-item;
   margin: 0.5rem;
+}
+
+
+@media (max-width: 1024px) {
+  .popup-icon{
+    height: 50px;
+    width: 110px;
+  }
+
+  .popup-image {
+    height: 50px;
+    width: 100px;
+  }
+  .heading-container{
+    gap: 2rem;
+  }
+
+  .life-insurance-body-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .random-image-container {
+    display: flex;
+    height: 100%;
+    padding: 0.75rem;
+    padding-left: 0;
+    
+  }
+  
+  .random-image {
+    width: 3rem;
+    height: 2rem;
+    border-radius: 5px;
+    margin-left: 1.5rem;
+  }
 }

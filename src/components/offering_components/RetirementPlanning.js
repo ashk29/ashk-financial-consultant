@@ -6,7 +6,10 @@ function RetirementPlanning() {
   return (
     <>
       <div className="heading-container">
-        <img src="icons/logos/retired_man_pencil.webp" className="popup-image"></img>
+        <img
+          src="icons/logos/retired_man_pencil.webp"
+          className="popup-image"
+        ></img>
         <h1>Retirement Planning</h1>
       </div>
       <p>
@@ -28,7 +31,10 @@ function RetirementPlanning() {
         chance—let's work together to create a retirement plan that ensures you
         can live the life you've always dreamed of.
       </p>
-      <p>Contact Me to Explore Plans</p>
+      <p>
+        <br />
+        Contact Me to Explore Plans
+      </p>
       <Contacts />
     </>
   );

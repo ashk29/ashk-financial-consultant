@@ -26,7 +26,7 @@ function DmatAccount() {
         target="_blank"
         className="dmat-txt"
       >
-        Let's Get Started
+        <br/>Let's Get Started
         <img src="icons/green/arrow.svg" class="arrow-icon"></img>
       </a>
     </>
