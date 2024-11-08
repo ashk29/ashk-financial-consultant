@@ -1,51 +1,79 @@
-.intro-container{
-    margin-top: 6rem;
-    height: 650px;
+.intro-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+  height: 650px;
 }
-.profile-image{
-    float: right;
-    width: 450px;
-    height: 650px;
-    margin-right: 2rem;
-    border-radius: 0.5rem;
-    /* margin-top: 6rem; */
+
+.profile-image {
+  width: 450px;
+  height: 625px;
+  margin-right: 5rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
 }
-.txt-container{
-    width: 60%;
-    padding: 2rem;
+
+.txt-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  word-wrap: break-word;
+  white-space: normal;
+  padding: 2rem;
+  gap: 1rem;
+  margin-left: 5rem;
+}
+
+.txt-container h1 {
+  margin-bottom: 20px;
+}
+
+.txt-container p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.chat-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: white;
+  border-color: #046b46;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: medium;
+}
+
+.chat-btn img {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.chat-btn:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 1024px) {
+  .intro-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    word-wrap: break-word;
-    white-space: normal;
-    padding: 2rem;
-    gap: 1rem;
-    margin-left: 5rem;
-}
+    flex-direction: column-reverse;
+    height: auto; /* Allow height to adjust */
+    margin-top: 150px;
+  }
 
-h1{
-    
-    margin-top: 5rem;
-}
-p{  
-    margin-top: 2rem;
-}
+  .profile-image {
+    width: 70%;
+    margin-bottom: 20px;
+    order: 1;
+  }
 
-.chat-btn{
-border-radius: 0.5rem;
-border-color: #046b46;
-border-width: 0.15rem;
-font-size: small;
-padding: 0.5rem;
-background-color: white;
-}
-.chat-btn:hover{
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-
-.btn-whatsapp{
-width: 1rem;
-margin-left: 0.75rem;
+  .txt-container {
+    width: 100%;
+    order: 1;
+  }
 }
