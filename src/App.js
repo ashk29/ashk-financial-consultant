@@ -1,25 +1,21 @@
-import React, { createElement } from 'react';
-import './App.css';
-import Navbar from './components/Navbar';
-import IntroPage from './components/IntroPage';
-import OfferPage from './components/OfferPage';
-import WhyPage from './components/WhyPage';
-import Videos from './components/VideoPage';
-import Navbar1 from './components/Navbar1';
+import React from "react";
+import "./App.css";
+import IntroPage from "./components/IntroPage";
+import OfferPage from "./components/OfferPage";
+import WhyPage from "./components/WhyPage";
+import Videos from "./components/VideoPage";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-    <Navbar1 />
+      <Navbar />
       <IntroPage />
       <OfferPage />
       <WhyPage />
-      <Videos/>
-      </>
+      <Videos />
+    </>
   );
 }
 
 export default App;
-
-
-

@@ -1,10 +1,11 @@
 import React from "react";
 import "./IntroPage.css";
+import useDeviceType from "../hooks/useDeviceType";
 
 export default function IntroPage() {
+  const isMobile = useDeviceType();
   return (
     <div className="intro-container">
-      <img src="images/Ashish.jpeg" className="profile-image"></img>
       <div className="txt-container">
         <h1>ASHISH KHANDELWAL</h1>
         <p>
@@ -20,13 +21,17 @@ export default function IntroPage() {
           I have over 20+ years of experience as financial consultant <br />
           and have worked with ICICI and SBI for over 10 years.
         </p>
-        <a href="https://wa.me/+918819080000?text=Hi">
+        <a
+          href="https://wa.me/+918819080000?text=Hi"
+          style={{ width: "fit-content" }}
+        >
           <button type="button" class="chat-btn">
             Let's Chat
             <img src="icons/green/whatsapp.png" className="btn-whatsapp"></img>
           </button>
         </a>
       </div>
+      <img src="images/Ashish.jpeg" className="profile-image"></img>
     </div>
   );
 }
