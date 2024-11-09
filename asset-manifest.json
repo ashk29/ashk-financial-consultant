@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/ashk-financial-consultant/static/css/main.bbd1929d.css",
-    "main.js": "/ashk-financial-consultant/static/js/main.7d4eefc4.js",
+    "main.css": "/ashk-financial-consultant/static/css/main.7cf0c3ff.css",
+    "main.js": "/ashk-financial-consultant/static/js/main.6b7befc6.js",
     "index.html": "/ashk-financial-consultant/index.html",
-    "main.bbd1929d.css.map": "/ashk-financial-consultant/static/css/main.bbd1929d.css.map",
-    "main.7d4eefc4.js.map": "/ashk-financial-consultant/static/js/main.7d4eefc4.js.map"
+    "main.7cf0c3ff.css.map": "/ashk-financial-consultant/static/css/main.7cf0c3ff.css.map",
+    "main.6b7befc6.js.map": "/ashk-financial-consultant/static/js/main.6b7befc6.js.map"
   },
   "entrypoints": [
-    "static/css/main.bbd1929d.css",
-    "static/js/main.7d4eefc4.js"
+    "static/css/main.7cf0c3ff.css",
+    "static/js/main.6b7befc6.js"
   ]
 }
