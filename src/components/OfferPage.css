@@ -1,22 +1,21 @@
-.offer-container{
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 1rem;
+.offer-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 hr {
-    border: none;
-    border-top: 5px solid #046b46;
-    width: 100%;
-    /* height: 20px; */
-    /* color: #046b46; */
-    /* margin: 20px 0; */
-
+  border: none;
+  border-top: 5px solid #046b46;
+  width: 100%;
 }
-.page-heading{
-    margin-top: 2rem;
-    padding: 1rem;
-    text-align: center;
-    margin-bottom: 3rem;
+.page-heading {
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }

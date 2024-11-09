@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React from "react";
 import "./OfferPage.css";
 import OfferBox from "./child_components/OfferBox";
 import "./child_components/ChildComponents.css";
@@ -17,7 +17,7 @@ const offeringsText = Object.values(Offerings);
 export default function OfferPage() {
   return (
     <>
-      <hr className="page-line"></hr>
+      <hr />
       <h2 className="page-heading">What I Offer</h2>
 
       <div className="offer-container">
