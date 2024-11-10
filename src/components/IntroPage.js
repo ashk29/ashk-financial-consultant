@@ -1,9 +1,7 @@
 import React from "react";
 import "./IntroPage.css";
-import useDeviceType from "../hooks/useDeviceType";
 
 export default function IntroPage() {
-  const isMobile = useDeviceType();
   return (
     <div className="intro-container">
       <div className="txt-container">
