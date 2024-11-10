@@ -1,8 +1,10 @@
 import React from "react";
 import Contacts from "./Contacts";
 import "./Offerings.css";
+import useDeviceType from "../../hooks/useDeviceType";
 
 function HealthInsurance() {
+  const isMobile = useDeviceType();
   return (
     <>
       <div className="heading-container">
@@ -10,7 +12,7 @@ function HealthInsurance() {
           src="icons/logos/start_health_logo.png"
           className="popup-icon"
         ></img>
-        <h1>Health Insurance</h1>
+        {isMobile ? <h3>Health Insurance</h3> : <h1>Health Insurance</h1>}
       </div>
       <p>
         Health insurance is your safety net in an uncertain world. With rising

@@ -1,8 +1,10 @@
 import React from "react";
 import Contacts from "./Contacts";
 import "./Offerings.css";
+import useDeviceType from "../../hooks/useDeviceType";
 
 function LifeInsurance() {
+  const isMobile = useDeviceType();
   return (
     <>
       <div className="heading-container">
@@ -10,7 +12,11 @@ function LifeInsurance() {
           src="icons/logos/aditya_birla_logo.webp"
           className="popup-icon"
         ></img>
-        <h1 style={{ margin: 0 }}>Life Insurance</h1>
+        {isMobile ? (
+          <h3 style={{ margin: 0 }}>Life Insurance</h3>
+        ) : (
+          <h1 style={{ margin: 0 }}>Life Insurance</h1>
+        )}
       </div>
       <p>
         Life insurance is about securing the future of your loved ones, ensuring

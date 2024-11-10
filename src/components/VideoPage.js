@@ -28,7 +28,7 @@ export default function Videos() {
             <video className="video" controls>
               <source src={video} type="video/mp4" />
             </video>
-            <h4 style={{ marginBottom: "2rem" }}>{VideoTxt[index]}</h4>
+            <p className="video-title">{VideoTxt[index]}</p>
           </div>
         ))}
       </div>

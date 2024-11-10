@@ -1,16 +1,18 @@
 import React from "react";
 import Contacts from "./Contacts";
 import "./Offerings.css";
+import useDeviceType from "../../hooks/useDeviceType";
 
 function InvestmentAdvice() {
+  const isMobile = useDeviceType();
   return (
     <>
       <div className="heading-container">
         <img
-          src="icons/logos/investment_advice.webp"
+          src="icons/logos/investment_advice.png"
           className="popup-image"
         ></img>
-        <h1>Investment Advice</h1>
+        {isMobile ? <h3>Investment Advice</h3> : <h1>Investment Advice</h1>}
       </div>
       <p>
         Investment advice is crucial for making informed financial decisions and

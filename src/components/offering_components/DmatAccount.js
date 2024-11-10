@@ -1,12 +1,14 @@
 import React from "react";
 import "./Offerings.css";
+import useDeviceType from "../../hooks/useDeviceType";
 
 function DmatAccount() {
+  const isMobile = useDeviceType();
   return (
     <>
       <div className="heading-container">
         <img src="icons/logos/dmat.png" className="popup-image"></img>
-        <h1>Dmat Account</h1>
+        {isMobile ? <h3>Dmat Account</h3> : <h1>Dmat Account</h1>}
       </div>
       <p>
         Open your trading account today and step into the world of investing.

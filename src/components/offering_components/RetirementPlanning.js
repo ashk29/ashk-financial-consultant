@@ -1,16 +1,18 @@
 import React from "react";
 import Contacts from "./Contacts";
 import "./Offerings.css";
+import useDeviceType from "../../hooks/useDeviceType";
 
 function RetirementPlanning() {
+  const isMobile = useDeviceType();
   return (
     <>
       <div className="heading-container">
         <img
-          src="icons/logos/retired_man_pencil.webp"
+          src="icons/logos/retired_man_pencil.png"
           className="popup-image"
         ></img>
-        <h1>Retirement Planning</h1>
+        {isMobile ? <h3>Retirement Planning</h3> : <h1>Retirement Planning</h1>}
       </div>
       <p>
         Retirement planning is essential to ensure you can enjoy your golden

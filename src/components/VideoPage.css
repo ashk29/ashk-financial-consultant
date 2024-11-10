@@ -16,6 +16,12 @@
   border-radius: 10px;
   margin-bottom: 0.5rem;
 }
+.video-title {
+  margin-bottom: 2rem;
+  overflow-wrap: break-word;
+  font-size: 24px;
+  font-weight: 500;
+}
 
 @media (max-width: 1024px) {
   .video {
@@ -24,5 +30,11 @@
     background-color: grey;
     border-radius: 10px;
     margin-bottom: 0.5rem;
+  }
+
+  .video-title {
+    margin-bottom: 1rem;
+    font-size: 16px;
+    font-weight: 600;
   }
 }
