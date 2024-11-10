@@ -9,9 +9,13 @@ const VideoList = [
   "videos/investment_secret.mp4",
 ];
 
-const VideoTxt = ["What is SIP ? Let us understand", "Learn from Sunil Chhetri",
-    "Haan, mai insurance bechta hu.", "Right time to buy insurance.", "Investment secret you don't know."
-]
+const VideoTxt = [
+  "What is SIP ? Let us understand.",
+  "Learn from Sunil Chhetri.",
+  "Haan, mai insurance bechta hu.",
+  "Right time to buy insurance.",
+  "Investment secret you don't know.",
+];
 
 export default function Videos() {
   return (
@@ -23,8 +27,8 @@ export default function Videos() {
           <div className="video-container">
             <video className="video" controls>
               <source src={video} type="video/mp4" />
-                </video>
-                <h3 style={{marginBottom:'2rem'}}>{VideoTxt[index]}</h3>
+            </video>
+            <p className="video-title">{VideoTxt[index]}</p>
           </div>
         ))}
       </div>

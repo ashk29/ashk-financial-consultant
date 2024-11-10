@@ -60,7 +60,6 @@
 /* Responsive Design for Mobile */
 @media (max-width: 1024px) {
   .intro-container {
-    display: flex;
     flex-direction: column-reverse;
     height: auto; /* Allow height to adjust */
     margin-top: 150px;
@@ -68,12 +67,13 @@
 
   .profile-image {
     width: 70%;
+    height: auto;
     margin-bottom: 20px;
-    order: 1;
+    margin-right: 0;
   }
 
   .txt-container {
     width: 100%;
-    order: 1;
+    margin-left: 0;
   }
 }
