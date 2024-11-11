@@ -1,5 +1,6 @@
 .sip-calculator-container {
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .sip-chart {
@@ -47,10 +48,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .sign{
   background-color: #20cd8d;
-  /* width: 30px; */
   height: 28px;
-  align-items: center;
-  /* padding: 1px; */
   padding-left: 8px;
   padding-right: 8px;
   border-top-right-radius: 3px;

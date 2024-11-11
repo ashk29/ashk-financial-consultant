@@ -1,24 +1,17 @@
 import React from "react";
 import "./App.css";
-import IntroPage from "./components/IntroPage";
-import OfferPage from "./components/OfferPage";
-import WhyPage from "./components/WhyPage";
-import Videos from "./components/VideoPage";
-import Navbar from "./components/Navbar";
-import Questions from "./components/Questions";
-import SipCalculator from "./components/sip_calc/SipCalculator";
+import HomePage from "./pages/HomePage";
+import SipCalc from "./pages/SipCalc";
+import { HashRouter, Route, Router, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <SipCalculator />
-      <IntroPage />
-      <Questions />
-      <OfferPage />
-      <WhyPage />
-      <Videos />
-    </>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/sip-calculator" element={<SipCalc />} />
+      </Routes>
+    </HashRouter>
   );
 }
 
