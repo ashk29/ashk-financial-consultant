@@ -3,7 +3,60 @@
 }
 
 .sip-chart {
+  display: flex;
   width: 50%;
   height: auto;
   margin-left: 64px;
+  gap: 128px;
 }
+
+.pie-chart-info{
+  margin-top: 32px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.calc-param-container{
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  margin-left: 64px;
+}
+
+.input{
+  display: flex;
+}
+.input-box{
+  width: 80px;
+  height: 28px;
+  border: 1.5px solid #20cd8d;
+  font-weight: 500;
+  padding: 5px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-box:focus{
+  border: 0;
+}
+
+.sign{
+  background-color: #20cd8d;
+  /* width: 30px; */
+  height: 28px;
+  align-items: center;
+  /* padding: 1px; */
+  padding-left: 8px;
+  padding-right: 8px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+

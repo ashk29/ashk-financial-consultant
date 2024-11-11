@@ -9,10 +9,11 @@ export function CalculateTotalReturn(
     totalAmount = Math.round(
       (totalAmount + sipAmount * 12) * (1 + rateOfReturn / 100)
     );
-    perYrAmount.push(totalAmount);
+      perYrAmount.push(totalAmount);
   }
-  console.log(perYrAmount);
-  return perYrAmount;
+    console.log(perYrAmount);
+    return perYrAmount;
+  
 }
 
 export function CalculateTotalInvestment(sipAmount, investmentPeriod) {
