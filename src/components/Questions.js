@@ -1,7 +1,12 @@
 import React from "react";
-import './Questions.css';
+import "./Questions.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Questions() {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/sip-calculator");
+  };
   return (
     <>
       <hr className="page-line"></hr>
@@ -9,11 +14,21 @@ export default function Questions() {
       <div className="questions-page-container">
         <div className="question">
           <img src="images/how-much-sip.png" className="question-img"></img>
-          <button className="question-btn">SIP Calculator</button>
+          <button className="question-btn" onClick={handleNavigate}>
+            SIP Calculator
+          </button>
         </div>
         <div className="question">
-          <img src="images/are-you-protected.png" className="question-img"></img>
-          <button className="question-btn"> Check Protection Score</button>
+          <img
+            src="images/are-you-protected.png"
+            className="question-img"
+          ></img>
+          <a
+            href="https://lisalesbuddy.adityabirlacapital.com/abslitools/financialprotectiontool/financialprotection.html?advisor_code=1624464133686&need_id=1624526620665&link_code=1725711361937"
+            target="_blank"
+          >
+            <button className="question-btn"> Check Protection Score</button>
+          </a>
         </div>
       </div>
     </>
