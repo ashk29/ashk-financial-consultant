@@ -19,30 +19,36 @@ const BannerText = [
 
 export default function WhyPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [slideDirection, setSlideDirection] = useState('next'); // State to track the slide direction
+  const [slideDirection, setSlideDirection] = useState("next"); // State to track the slide direction
   const [animate, setAnimate] = useState(false); // State to trigger animation re-render
 
   const isMobile = useDeviceType();
 
   const handleNext = () => {
-    setSlideDirection('next');
+    console.log(imagesPerSlide())
+    setSlideDirection("next");
     setAnimate(false);
     setTimeout(() => {
       setAnimate(true);
       setCurrentIndex((prevIndex) =>
-        prevIndex >= BannerImage.length - imagesPerSlide() ? 0 : prevIndex + imagesPerSlide()
+        prevIndex >= BannerImage.length - imagesPerSlide()
+          ? 0
+          : prevIndex + imagesPerSlide()
       );
     }, 50);
   };
 
   // Function to go to the previous slide
   const handlePrev = () => {
-    setSlideDirection('prev');
+    console.log(imagesPerSlide())
+    setSlideDirection("prev");
     setAnimate(false);
     setTimeout(() => {
       setAnimate(true);
       setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? BannerImage.length - imagesPerSlide() : prevIndex - imagesPerSlide()
+        prevIndex === 0
+          ? BannerImage.length - imagesPerSlide()
+          : prevIndex - imagesPerSlide()
       );
     }, 50);
   };
@@ -52,13 +58,10 @@ export default function WhyPage() {
     return isMobile ? 1 : 2;
   };
 
-  // useEffect to automatically change slides every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       handleNext();
-    }, 5000); // 5-second interval
-
-    // Clear the interval on component unmount to avoid memory leaks
+    }, 5000);
     return () => clearInterval(interval);
   }, [currentIndex]);
 
@@ -66,32 +69,34 @@ export default function WhyPage() {
     <>
       <hr className="page-line"></hr>
       <h2 className="page-heading"> Why You Need Planning</h2>
-      {/* <div className="why-page-container">
-        {BannerImage.map((image, index) => (
-          <WhyBanner img_path={image} img_txt={BannerText[index]} />
-        ))}
-      </div> */}
-      <div className="carousel-container">
-      <button className="carousel-arrow left-arrow" onClick={handlePrev}>
-        &#8249;
-      </button>
+      <div className="why-page-container">
+        <button className="carousel-arrow left-arrow" onClick={handlePrev}>
+          &#8249;
+        </button>
 
-      <div
-        className={`carousel-images ${
-          animate ? (slideDirection === 'next' ? 'slide-next' : 'slide-prev') : ''
-        }`}
-      >
-        {BannerImage.slice(currentIndex, currentIndex + 2).map((image, index) => (
-          <div className="why-banner" key={index}>
-            <WhyBanner img_path={image} img_txt={BannerText[currentIndex + index]} />
-          </div>
-        ))}
+        <div
+          className={`carousel-images ${
+            animate
+              ? slideDirection === "next"
+                ? "slide-next"
+                : "slide-prev"
+              : ""
+          }`}
+        >
+          {BannerImage.slice(currentIndex, currentIndex + imagesPerSlide()).map(
+            (image, index) => (
+              <WhyBanner
+                img_path={image}
+                img_txt={BannerText[currentIndex + index]}
+              />
+            )
+          )}
+        </div>
+
+        <button className="carousel-arrow right-arrow" onClick={handleNext}>
+          &#8250;
+        </button>
       </div>
-
-      <button className="carousel-arrow right-arrow" onClick={handleNext}>
-        &#8250;
-      </button>
-    </div>
     </>
   );
 }

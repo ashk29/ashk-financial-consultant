@@ -3,23 +3,16 @@
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
-  gap: 2rem;
   justify-content: center;
   align-items: center;
-}
-
-.carousel-container {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 100%;
 }
 
 .carousel-images {
   display: flex;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
-  width: 100%;
+  width: auto;
   transition: transform 2s ease-in-out;
 }
 
@@ -48,7 +41,6 @@
     transform: translateX(0);
   }
 }
-
 
 .carousel-arrow {
   background-color: transparent;
