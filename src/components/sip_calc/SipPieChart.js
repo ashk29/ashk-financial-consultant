@@ -1,6 +1,7 @@
 import React from 'react'
 import "./SipCalculator.css"
 import { Pie } from 'react-chartjs-2';
+import { FormatDigits } from './CalculatorFuctions';
 import {
   Chart as ChartJS,
   ArcElement,
@@ -46,9 +47,9 @@ const SipPieChart=({totalReturn,totalInvestment})=>{
     return (<>
         <Pie data={data} options={options} />
         <div className="pie-chart-info">
-            <p>Total Invested Amount : &emsp;{ totalInvestment}</p>
-            <p>Total Wealth Gained : &emsp;&emsp;{ totalReturn-totalInvestment}</p>
-            <p>Total Amount : &emsp;&emsp;&emsp;&emsp;&emsp;{ totalReturn}</p>
+            <p>Total Invested Amount : &emsp;{ FormatDigits(totalInvestment)}</p>
+            <p>Total Wealth Gained : &emsp;&emsp;{ FormatDigits(totalReturn-totalInvestment)}</p>
+            <p>Total Amount : &emsp;&emsp;&emsp;&emsp;&emsp;{ FormatDigits(totalReturn)}</p>
         </div>
     </>);
 };

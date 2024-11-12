@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { CalculateTotalReturn } from "./CalculatorFuctions";
+import { CalculateTotalReturn, CalculateTotalInvestment } from "./CalculatorFuctions";
 import SipLineChart from "./SipLineChart";
 import "./SipCalculator.css";
-import { CalculateTotalInvestment } from "./CalculatorFuctions";
 import SipPieChart from "./SipPieChart";
 
 export default function SipCalculator() {
