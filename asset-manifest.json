@@ -1,13 +1,22 @@
 {
   "files": {
-    "main.css": "/ashk-financial-consultant/static/css/main.3b10f44e.css",
-    "main.js": "/ashk-financial-consultant/static/js/main.2ce2627a.js",
+    "main.css": "/ashk-financial-consultant/static/css/main.1f4b6639.chunk.css",
+    "main.js": "/ashk-financial-consultant/static/js/main.be523254.chunk.js",
+    "main.js.map": "/ashk-financial-consultant/static/js/main.be523254.chunk.js.map",
+    "runtime-main.js": "/ashk-financial-consultant/static/js/runtime-main.6388fa09.js",
+    "runtime-main.js.map": "/ashk-financial-consultant/static/js/runtime-main.6388fa09.js.map",
+    "static/js/2.d1323b0b.chunk.js": "/ashk-financial-consultant/static/js/2.d1323b0b.chunk.js",
+    "static/js/2.d1323b0b.chunk.js.map": "/ashk-financial-consultant/static/js/2.d1323b0b.chunk.js.map",
     "index.html": "/ashk-financial-consultant/index.html",
-    "main.3b10f44e.css.map": "/ashk-financial-consultant/static/css/main.3b10f44e.css.map",
-    "main.2ce2627a.js.map": "/ashk-financial-consultant/static/js/main.2ce2627a.js.map"
+    "precache-manifest.0dc27db4b77c545f3bb53d4713ae20b9.js": "/ashk-financial-consultant/precache-manifest.0dc27db4b77c545f3bb53d4713ae20b9.js",
+    "service-worker.js": "/ashk-financial-consultant/service-worker.js",
+    "static/css/main.1f4b6639.chunk.css.map": "/ashk-financial-consultant/static/css/main.1f4b6639.chunk.css.map",
+    "static/js/2.d1323b0b.chunk.js.LICENSE.txt": "/ashk-financial-consultant/static/js/2.d1323b0b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/css/main.3b10f44e.css",
-    "static/js/main.2ce2627a.js"
+    "static/js/runtime-main.6388fa09.js",
+    "static/js/2.d1323b0b.chunk.js",
+    "static/css/main.1f4b6639.chunk.css",
+    "static/js/main.be523254.chunk.js"
   ]
 }
