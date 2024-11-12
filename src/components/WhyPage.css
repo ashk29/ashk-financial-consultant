@@ -3,7 +3,59 @@
   display: flex;
   flex-wrap: wrap;
   padding: 1rem;
-  gap: 2rem;
   justify-content: center;
   align-items: center;
+}
+
+.carousel-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: auto;
+  transition: transform 2s ease-in-out;
+}
+
+.slide-next {
+  animation: slideInNext 2s ease-in-out;
+}
+
+.slide-prev {
+  animation: slideInPrev 2s ease-in-out;
+}
+
+@keyframes slideInNext {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInPrev {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.carousel-arrow {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.left-arrow {
+  position: absolute;
+  left: 0;
+}
+
+.right-arrow {
+  position: absolute;
+  right: 0;
 }
