@@ -1,0 +1,32 @@
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  padding-left: 16px;
+}
+
+.footer-txt {
+  font-size: 0.75rem;
+}
+
+.footer-address {
+  display: flex;
+  gap: 3px;
+  margin-right: 32px;
+}
+
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .footer-txt {
+    font-size: 0.6rem;
+    margin-bottom: -10px;
+  }
+  .footer-address {
+    font-size: 0.7rem;
+    align-items: flex-start;
+  }
+}
