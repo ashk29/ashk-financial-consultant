@@ -1,8 +1,8 @@
 .offer-container {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-bottom: 1rem;
+  gap: 6rem;
+  margin-bottom: 3rem;
   align-items: center;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -18,4 +18,12 @@ hr {
   padding: 1rem;
   text-align: center;
   margin-bottom: 3rem;
+}
+
+@media (max-width: 1024px){
+  .offer-container {
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  
 }
