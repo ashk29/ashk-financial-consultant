@@ -21,11 +21,11 @@ export default function Navbar() {
   return (
     <div className="header">
       <div className="header-container">
-        <a href="/">
+        <a href="/ashk-financial-consultant">
           <img src="icons/icon.png" alt="Logo" className="logo"></img>
         </a>
         <div className={isMobile ? "sub-container-mob" : "sub-container"}>
-          <a href="/" className="brand">
+          <a href="/ashk-financial-consultant" className="brand">
             KHANDELWAL
             <div className="sub-brand">Consultancy</div>
           </a>
