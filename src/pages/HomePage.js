@@ -5,6 +5,7 @@ import Questions from "../components/Questions";
 import OfferPage from "../components/OfferPage";
 import WhyPage from "../components/WhyPage";
 import Videos from "../components/VideoPage";
+import Footer from "../components/Footer";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <OfferPage />
       <WhyPage />
       <Videos />
+      <Footer/>
     </>
   );
 }
