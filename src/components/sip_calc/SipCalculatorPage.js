@@ -59,7 +59,7 @@ export default function SipCalculator() {
 
   return (
     <>
-      <h2 className="page-heading"> SIP Calculator</h2>
+      <h2 className="sip-page-heading"> SIP Calculator</h2>
       <div className="sip-calculator-container">
         <div className="calc-param-container">
           <span className="input">
