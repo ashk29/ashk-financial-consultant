@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { CalculateTotalReturn, CalculateTotalInvestment } from "./CalculatorFuctions";
+import {
+  CalculateTotalReturn,
+  CalculateTotalInvestment,
+} from "./CalculatorFuctions";
 import SipLineChart from "./SipLineChart";
 import "./SipCalculator.css";
 import SipPieChart from "./SipPieChart";
@@ -55,57 +58,61 @@ export default function SipCalculator() {
   };
 
   return (
-    <div className="sip-calculator-container">
+    <>
       <h2 className="page-heading"> SIP Calculator</h2>
-      <div className="sip-chart">
-        {chartData && (
-          <SipLineChart
-            perYrReturn={chartData}
-            labels={yearLables}
-            investedAmounts={investedAmounts}
-          />
-        )}
-        <div>
+      <div className="sip-calculator-container">
+        <div className="calc-param-container">
+          <span className="input">
+            <input
+              type="number"
+              value={sipAmount}
+              onChange={handleSipAmount}
+              className="input-box"
+            ></input>
+            <div className="sign">₹</div>
+          </span>
+          <span className="input">
+            <input
+              type="number"
+              value={rateOfReturn}
+              onChange={handleRateOfReturn}
+              className="input-box"
+            ></input>
+            <div className="sign">%</div>
+          </span>
+          <span className="input">
+            <input
+              type="number"
+              value={investmentPeriod}
+              onChange={handleInvestmentPeriod}
+              className="input-box bg-color"
+            ></input>
+            <div className="sign">years</div>
+          </span>
+          <button className="question-btn" onClick={handleSubmit}>
+            Calculate
+          </button>
+        </div>
+        <div className="sip-chart-container">
+        <div className="sip-chart">
+          {chartData && (
+            <SipLineChart
+              perYrReturn={chartData}
+              labels={yearLables}
+              investedAmounts={investedAmounts}
+            />
+          )}
+        </div>
+        <div className="sip-pie">
           {totalReturn && (
             <SipPieChart
               totalReturn={totalReturn}
               totalInvestment={totalInvestment}
             />
           )}
-        </div>
+          </div>
+          </div>
       </div>
-      <div className="calc-param-container">
-        <span className="input">
-          <input
-            type="number"
-            value={sipAmount}
-            onChange={handleSipAmount}
-            className="input-box"
-          ></input>
-          <div className="sign">₹</div>
-        </span>
-        <span className="input">
-          <input
-            type="number"
-            value={rateOfReturn}
-            onChange={handleRateOfReturn}
-            className="input-box"
-          ></input>
-          <div className="sign">%</div>
-        </span>
-        <span className="input">
-          <input
-            type="number"
-            value={investmentPeriod}
-            onChange={handleInvestmentPeriod}
-            className="input-box bg-color" 
-          ></input>
-          <div className="sign">years</div>
-        </span>
-        <button className="question-btn" onClick={handleSubmit}>
-          Calculate
-        </button>
-      </div>
-    </div>
+    </>
   );
 }
