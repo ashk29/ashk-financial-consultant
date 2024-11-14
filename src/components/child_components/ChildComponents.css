@@ -14,11 +14,12 @@
   border-radius: 3rem;
   width: 528px;
   height: 320px;
-  padding-left: 2rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
-  margin-left: 5rem;
-  margin-bottom: 2rem;
+  justify-content: center;
+  /* margin-left: 5rem; */
+  /* margin-bottom: 2rem; */
 }
 
 .why-image {
@@ -44,7 +45,8 @@
   .why-banner-container {
     width: 300px;
     height: 200px;
-    margin-left: auto;
+    /* margin-left: auto; */
+    margin: auto;
   }
   .why-image {
     width: 10rem;
