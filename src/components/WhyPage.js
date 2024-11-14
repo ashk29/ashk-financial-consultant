@@ -14,56 +14,17 @@ const BannerText = [
   "To Secure Your Family",
   "To Grow Your Wealth ",
   "To Retire Happily",
-  "To Secure your child’s future",
+  "To Secure your child's future",
 ];
 
 export default function WhyPage() {
-  // const [currentIndex, setCurrentIndex] = useState(0);
-  // const [slideDirection, setSlideDirection] = useState("next");
-  // const [animate, setAnimate] = useState(false);
-
+  
   const isMobile = useDeviceType();
-
-  // const handleNext = () => {
-  //   console.log(imagesPerSlide())
-  //   setSlideDirection("next");
-  //   setAnimate(false);
-  //   setTimeout(() => {
-  //     setAnimate(true);
-  //     setCurrentIndex((prevIndex) =>
-  //       prevIndex >= BannerImage.length - imagesPerSlide()
-  //         ? 0
-  //         : prevIndex + imagesPerSlide()
-  //     );
-  //   }, 50);
-  // };
-
-  // const handlePrev = () => {
-  //   console.log(imagesPerSlide())
-  //   setSlideDirection("prev");
-  //   setAnimate(false);
-  //   setTimeout(() => {
-  //     setAnimate(true);
-  //     setCurrentIndex((prevIndex) =>
-  //       prevIndex === 0
-  //         ? BannerImage.length - imagesPerSlide()
-  //         : prevIndex - imagesPerSlide()
-  //     );
-  //   }, 50);
-  // };
 
   // Function to determine the number of images to show per slide
   const imagesPerSlide = () => {
-    // return isMobile ? 1 : 2;
-    return 1;
+    return isMobile ? 1 : 2;
   };
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     handleNext();
-  //   }, 5000);
-  //   return () => clearInterval(interval);
-  // }, [currentIndex]);
 
   const [index, setIndex] = useState(0);
   const delay = 5000;
@@ -80,7 +41,9 @@ export default function WhyPage() {
     setAnimationState("slide-out"); // Start slide out
     setTimeout(() => {
       setIndex((prevIndex) =>
-        prevIndex === BannerImage.length - 1 ? 0 : prevIndex + 1
+        prevIndex === BannerImage.length - imagesPerSlide()
+          ? 0
+          : prevIndex + imagesPerSlide()
       );
       setAnimationState("slide-in"); // After slide-out, start slide in
     }, 1000); // Slide-out duration matches the CSS animation duration
@@ -89,6 +52,7 @@ export default function WhyPage() {
   useEffect(() => {
     resetTimeout();
     timeout.current = setTimeout(() => setIndexValue(), delay);
+    console.log("Inde value:" + index);
     return () => {
       resetTimeout();
     };
@@ -102,23 +66,17 @@ export default function WhyPage() {
         <button className="carousel-arrow left-arrow" onClick={setIndexValue}>
           &#8249;
         </button>
-        {/* <div
-          className={`carousel-images ${animationState === "slide-in" ? "slide-in" : "slide-out"}`}
-        > */}
-        <div
-          className="carousel-images"
-        >
+        <div className="carousel-images">
           <div
-            className={`${
+            className={`slider ${
               animationState === "slide-in" ? "slide-in" : "slide-out"
             }`}
           >
-            {
-              <WhyBanner
-                img_path={BannerImage[index]}
-                img_txt={BannerText[index]}
-              />
-            }
+            {BannerImage.slice(index, index + imagesPerSlide()).map(
+              (image, idx) => (
+                <WhyBanner img_path={image} img_txt={BannerText[index + idx]} />
+              )
+            )}
           </div>
         </div>
 
