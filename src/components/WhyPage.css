@@ -11,7 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
+  overflow: hidden;
   width: 100%;
   transition: transform 2s ease-in-out;
   gap: 3rem;
@@ -19,20 +19,20 @@
 }
 
 .slide-in {
-  animation: slideInFromRight 1s ease forwards;
+  animation: slideInFromRight 2s ease forwards;
 }
 
-.stay {
-  animation-delay: 1s; /* Wait for the slide-in to finish */
-}
+/* .stay {
+  animation-delay: 2s;
+} */
 
 .slide-out {
-  animation: slideOutToLeft 1s ease forwards;
+  animation: slideOutToLeft 2s ease forwards;
 }
 
 @keyframes slideInFromRight {
   0% {
-    transform: translateX(100%);
+    transform: translateX(150%);
   }
   100% {
     transform: translateX(0);
@@ -41,10 +41,10 @@
 
 @keyframes slideOutToLeft {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(-150%);
   }
 }
 

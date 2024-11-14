@@ -77,9 +77,13 @@ export default function WhyPage() {
   }
 
   function setIndexValue() {
-    setIndex((prevIndex) =>
-      prevIndex === BannerImage.length - 1 ? 0 : prevIndex + imagesPerSlide()
-    );
+    setAnimationState("slide-out"); // Start slide out
+    setTimeout(() => {
+      setIndex((prevIndex) =>
+        prevIndex === BannerImage.length - 1 ? 0 : prevIndex + 1
+      );
+      setAnimationState("slide-in"); // After slide-out, start slide in
+    }, 1000); // Slide-out duration matches the CSS animation duration
   }
 
   useEffect(() => {
@@ -98,16 +102,24 @@ export default function WhyPage() {
         <button className="carousel-arrow left-arrow" onClick={setIndexValue}>
           &#8249;
         </button>
+        {/* <div
+          className={`carousel-images ${animationState === "slide-in" ? "slide-in" : "slide-out"}`}
+        > */}
         <div
           className="carousel-images"
-          style={{ transform: `translate3d(0%, 0, 0)` }}
         >
-          {
-            <WhyBanner
-              img_path={BannerImage[index]}
-              img_txt={BannerText[index]}
-            />
-          }
+          <div
+            className={`${
+              animationState === "slide-in" ? "slide-in" : "slide-out"
+            }`}
+          >
+            {
+              <WhyBanner
+                img_path={BannerImage[index]}
+                img_txt={BannerText[index]}
+              />
+            }
+          </div>
         </div>
 
         <button className="carousel-arrow right-arrow" onClick={setIndexValue}>
