@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import WhyBanner from "./child_components/WhyBanner";
 import "./OfferPage.css";
 import "./WhyPage.css";
@@ -14,86 +14,73 @@ const BannerText = [
   "To Secure Your Family",
   "To Grow Your Wealth ",
   "To Retire Happily",
-  "To Secure your child’s future",
+  "To Secure your child's future",
 ];
 
 export default function WhyPage() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [slideDirection, setSlideDirection] = useState("next"); // State to track the slide direction
-  const [animate, setAnimate] = useState(false); // State to trigger animation re-render
-
+  
   const isMobile = useDeviceType();
-
-  const handleNext = () => {
-    console.log(imagesPerSlide())
-    setSlideDirection("next");
-    setAnimate(false);
-    setTimeout(() => {
-      setAnimate(true);
-      setCurrentIndex((prevIndex) =>
-        prevIndex >= BannerImage.length - imagesPerSlide()
-          ? 0
-          : prevIndex + imagesPerSlide()
-      );
-    }, 50);
-  };
-
-  // Function to go to the previous slide
-  const handlePrev = () => {
-    console.log(imagesPerSlide())
-    setSlideDirection("prev");
-    setAnimate(false);
-    setTimeout(() => {
-      setAnimate(true);
-      setCurrentIndex((prevIndex) =>
-        prevIndex === 0
-          ? BannerImage.length - imagesPerSlide()
-          : prevIndex - imagesPerSlide()
-      );
-    }, 50);
-  };
 
   // Function to determine the number of images to show per slide
   const imagesPerSlide = () => {
     return isMobile ? 1 : 2;
   };
 
+  const [index, setIndex] = useState(0);
+  const delay = 5000;
+  const timeout = useRef(null);
+  const [animationState, setAnimationState] = useState("slide-in");
+
+  function resetTimeout() {
+    if (timeout.current) {
+      clearTimeout(timeout.current);
+    }
+  }
+
+  function setIndexValue() {
+    setAnimationState("slide-out"); // Start slide out
+    setTimeout(() => {
+      setIndex((prevIndex) =>
+        prevIndex === BannerImage.length - imagesPerSlide()
+          ? 0
+          : prevIndex + imagesPerSlide()
+      );
+      setAnimationState("slide-in"); // After slide-out, start slide in
+    }, 1000); // Slide-out duration matches the CSS animation duration
+  }
+
   useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [currentIndex]);
+    resetTimeout();
+    timeout.current = setTimeout(() => setIndexValue(), delay);
+    console.log("Inde value:" + index);
+    return () => {
+      resetTimeout();
+    };
+  }, [index]);
 
   return (
     <>
       <hr className="page-line"></hr>
       <h2 className="page-heading"> Why You Need Planning</h2>
       <div className="why-page-container">
-        <button className="carousel-arrow left-arrow" onClick={handlePrev}>
+        <button className="carousel-arrow left-arrow" onClick={setIndexValue}>
           &#8249;
         </button>
-
-        <div
-          className={`carousel-images ${
-            animate
-              ? slideDirection === "next"
-                ? "slide-next"
-                : "slide-prev"
-              : ""
-          }`}
-        >
-          {BannerImage.slice(currentIndex, currentIndex + imagesPerSlide()).map(
-            (image, index) => (
-              <WhyBanner
-                img_path={image}
-                img_txt={BannerText[currentIndex + index]}
-              />
-            )
-          )}
+        <div className="carousel-images">
+          <div
+            className={`slider ${
+              animationState === "slide-in" ? "slide-in" : "slide-out"
+            }`}
+          >
+            {BannerImage.slice(index, index + imagesPerSlide()).map(
+              (image, idx) => (
+                <WhyBanner img_path={image} img_txt={BannerText[index + idx]} />
+              )
+            )}
+          </div>
         </div>
 
-        <button className="carousel-arrow right-arrow" onClick={handleNext}>
+        <button className="carousel-arrow right-arrow" onClick={setIndexValue}>
           &#8250;
         </button>
       </div>
