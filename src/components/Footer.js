@@ -11,9 +11,9 @@ export default function Footer() {
           <br />
           <br />
         </span>
-        <div className="footer-address">
-          <span>Addess :</span>
-          {
+        <div>
+          <div className="footer-address">
+            <span>Addess :</span>
             <span>
               Khandelwal Consultancy
               <br />
@@ -21,7 +21,8 @@ export default function Footer() {
               <br />
               Chhattisgarh, 491001
             </span>
-          }
+          </div>
+            <div className="footer-address">Phone no : +91-8819080000</div>
         </div>
       </div>
     </>

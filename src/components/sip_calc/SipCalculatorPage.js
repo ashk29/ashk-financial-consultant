@@ -6,6 +6,7 @@ import {
 import SipLineChart from "./SipLineChart";
 import "./SipCalculator.css";
 import SipPieChart from "./SipPieChart";
+import PieChartInfo from "./PieChartInfo";
 
 export default function SipCalculator() {
   // Step 1: Create a state variable to manage input value
@@ -62,56 +63,73 @@ export default function SipCalculator() {
       <h2 className="sip-page-heading"> SIP Calculator</h2>
       <div className="sip-calculator-container">
         <div className="calc-param-container">
-          <span className="input">
-            <input
-              type="number"
-              value={sipAmount}
-              onChange={handleSipAmount}
-              className="input-box"
-            ></input>
-            <div className="sign">₹</div>
+          <span>
+            <div>Per Month</div>
+            <span className="input">
+              <input
+                type="number"
+                value={sipAmount}
+                onChange={handleSipAmount}
+                className="input-box"
+              ></input>
+              <div className="sign">₹</div>
+            </span>
           </span>
-          <span className="input">
-            <input
-              type="number"
-              value={rateOfReturn}
-              onChange={handleRateOfReturn}
-              className="input-box"
-            ></input>
-            <div className="sign">%</div>
+          <span>
+            <div>Per Year</div>
+            <span className="input">
+              <input
+                type="number"
+                value={rateOfReturn}
+                onChange={handleRateOfReturn}
+                className="input-box"
+              ></input>
+              <div className="sign">%</div>
+            </span>
           </span>
-          <span className="input">
-            <input
-              type="number"
-              value={investmentPeriod}
-              onChange={handleInvestmentPeriod}
-              className="input-box bg-color"
-            ></input>
-            <div className="sign">years</div>
+          <span>
+            <div>Duration</div>
+
+            <span className="input">
+              <input
+                type="number"
+                value={investmentPeriod}
+                onChange={handleInvestmentPeriod}
+                className="input-box bg-color"
+              ></input>
+              <div className="sign">years</div>
+            </span>
           </span>
           <button className="question-btn" onClick={handleSubmit}>
             Calculate
           </button>
-        </div>
-        <div className="sip-chart-container">
-        <div className="sip-chart">
-          {chartData && (
-            <SipLineChart
-              perYrReturn={chartData}
-              labels={yearLables}
-              investedAmounts={investedAmounts}
-            />
-          )}
-        </div>
-        <div className="sip-pie">
           {totalReturn && (
-            <SipPieChart
+            <PieChartInfo
               totalReturn={totalReturn}
               totalInvestment={totalInvestment}
             />
           )}
+        </div>
+
+        <div className="sip-chart-container">
+          <div className="sip-chart">
+            {chartData && (
+              <SipLineChart
+                perYrReturn={chartData}
+                labels={yearLables}
+                investedAmounts={investedAmounts}
+              />
+            )}
           </div>
+          <div className="sip-pie">
+            {totalReturn && (
+              <SipPieChart
+                totalReturn={totalReturn}
+                totalInvestment={totalInvestment}
+              />
+            )}
           </div>
+        </div>
       </div>
     </>
   );

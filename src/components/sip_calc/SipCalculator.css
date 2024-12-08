@@ -11,7 +11,15 @@
   flex-direction: column;
 }
 
+.param-labels{
+  /* display: flex; */
+  gap: 64px;
+  align-items: center;
+  margin-left: 64px;
+  margin-bottom: 0;
+}
 .calc-param-container {
+  margin-top: 0;
   display: flex;
   gap: 64px;
   align-items: center;

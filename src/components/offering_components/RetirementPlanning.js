@@ -10,7 +10,7 @@ function RetirementPlanning() {
       <div className="heading-container">
         <img
           src="icons/logos/retired_man_pencil.png"
-          className="popup-image"
+          className="popup-image" alt="jsx-a11y/alt-text"
         ></img>
         {isMobile ? <h3>Retirement Planning</h3> : <h1>Retirement Planning</h1>}
       </div>
@@ -20,7 +20,7 @@ function RetirementPlanning() {
         where you can pursue your dreams and live comfortably, free from
         money-related stress. Starting early allows you to take advantage of
         compounding growth, giving you greater financial stability when it's
-        time to retire.
+        time to retire. 
         <strong>
           As a well-versed retirement planner with over 20 years of experience,
           I offer personalized investment solutions tailored to your unique

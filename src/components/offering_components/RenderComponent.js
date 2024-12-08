@@ -6,6 +6,7 @@ import DmatAccount from "./DmatAccount";
 import MutualFund from "./MutualFund";
 import InvestmentAdvice from "./InvestmentAdvice";
 import RetirementPlanning from "./RetirementPlanning";
+import BusinessInsurance from "./BusinessInsurance";
 
 const RenderComponent = ({ componentName }) => {
   switch (componentName) {
@@ -21,6 +22,10 @@ const RenderComponent = ({ componentName }) => {
       return <InvestmentAdvice />;
     case Offerings.RETIREMENT_PLANNING:
       return <RetirementPlanning />;
+    case Offerings.BUSINESS_INSURANCE:
+      return <BusinessInsurance />;
+    default:
+      return NaN;
   }
 };
 

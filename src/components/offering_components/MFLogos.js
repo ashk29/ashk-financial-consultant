@@ -22,12 +22,12 @@ function MFLogos() {
     <>
       <div class="random-image-container">
         {firstLine.map((img, index) => (
-          <img src={img} className="random-image"></img>
+          <img src={img} className="random-image" alt="jsx-a11y/alt-text"></img>
         ))}
       </div>
       <div class="random-image-container">
         {secondLine.map((img, index) => (
-          <img src={img} className="random-image"></img>
+          <img src={img} className="random-image" alt="jsx-a11y/alt-text"></img>
         ))}
       </div>
     </>

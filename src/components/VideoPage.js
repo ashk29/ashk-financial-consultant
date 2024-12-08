@@ -7,6 +7,7 @@ const VideoList = [
   "videos/insurance.mp4",
   "videos/star_insurance.mp4",
   "videos/investment_secret.mp4",
+  "videos/diversification.mp4"
 ];
 
 const VideoTxt = [
@@ -15,6 +16,7 @@ const VideoTxt = [
   "Haan, mai insurance bechta hu.",
   "Right time to buy insurance.",
   "Investment secret you don't know.",
+  "Benifits of Diversification"
 ];
 
 export default function Videos() {

@@ -7,7 +7,7 @@ function DmatAccount() {
   return (
     <>
       <div className="heading-container">
-        <img src="icons/logos/dmat.png" className="popup-image"></img>
+        <img src="icons/logos/dmat.png" className="popup-image" alt="jsx-a11y/alt-text"></img>
         {isMobile ? <h3>Dmat Account</h3> : <h1>Dmat Account</h1>}
       </div>
       <p>
@@ -27,9 +27,10 @@ function DmatAccount() {
         href="https://alphaekyc.adityabirlamoney.com/?utm_source=DRA&dracode=DRA626452"
         target="_blank"
         className="dmat-txt"
+        rel="noopener noreferrer"
       >
         <br/>Let's Get Started
-        <img src="icons/green/arrow.svg" class="arrow-icon"></img>
+        <img src="icons/green/arrow.svg" class="arrow-icon" alt="jsx-a11y/alt-text"></img>
       </a>
     </>
   );

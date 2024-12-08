@@ -5,7 +5,7 @@ const NavIcons = [
   "icons/green/whatsapp.png",
   "icons/green/phone-call.png",
   "icons/green/mail.png",
-  "icons/green/google-forms.png",
+  // "icons/green/google-forms.png",
 ];
 const NavLinks = [
   "https://wa.me/+918819080000?text=Hi",
@@ -22,6 +22,7 @@ function Contacts() {
             className="contact-icons"
             src={navItem}
             key={"navItem-" + index}
+            alt="jsx-a11y/alt-text"
           />
         </a>
       ))}

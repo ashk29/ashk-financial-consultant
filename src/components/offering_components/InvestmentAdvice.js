@@ -10,7 +10,7 @@ function InvestmentAdvice() {
       <div className="heading-container">
         <img
           src="icons/logos/investment_advice.png"
-          className="popup-image"
+          className="popup-image" alt="jsx-a11y/alt-text"
         ></img>
         {isMobile ? <h3>Investment Advice</h3> : <h1>Investment Advice</h1>}
       </div>
@@ -21,7 +21,7 @@ function InvestmentAdvice() {
         navigate risks and take advantage of opportunities to maximize your
         wealth.
         <strong>
-          As a well-versed retirement planner with over 20 years of experience,
+           As a well-versed retirement planner with over 20 years of experience,
           I provide personalized investment strategies that align with your
           goals and risk tolerance.
         </strong>
