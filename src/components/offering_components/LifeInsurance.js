@@ -10,7 +10,7 @@ function LifeInsurance() {
       <div className="heading-container">
         <img
           src="icons/logos/aditya_birla_logo.webp"
-          className="popup-icon"
+          className="popup-icon" alt="jsx-a11y/alt-text"
         ></img>
         {isMobile ? (
           <h3 style={{ margin: 0 }}>Life Insurance</h3>
@@ -23,7 +23,7 @@ function LifeInsurance() {
         they are financially protected when life takes unexpected turns. It's
         not just an investment; it's a commitment to those you care about,
         providing them with stability and peace of mind when they need it most.
-        As a <strong>Certified Aditya Birla Insurance Agent</strong>, I
+        As a <strong>Certified Aditya Birla Insurance Advisor</strong>, I
         specialize in a variety of life insurance plans that cater to different
         needs and budgets. Whether you want to safeguard your family's future,
         create a savings plan, or ensure your children's education, I can help
@@ -41,7 +41,7 @@ function LifeInsurance() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="images/ashish_absli.jpeg" className="absli-cert"></img>
+          <img src="images/ashish_absli.jpeg" className="absli-cert" alt="jsx-a11y/alt-text"></img>
         </a>
         <div>
           <p>

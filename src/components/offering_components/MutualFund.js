@@ -9,7 +9,7 @@ function MutualFund() {
   return (
     <>
       <div className="heading-container">
-        <img src="icons/logos/mutual_fund.png" className="popup-image"></img>
+        <img src="icons/logos/mutual_fund.png" className="popup-image" alt="jsx-a11y/alt-text"></img>
         {isMobile ? <h3>Mutual Funds</h3> : <h1>Mutual Funds</h1>}
       </div>
       <p>

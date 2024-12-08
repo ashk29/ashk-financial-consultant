@@ -7,7 +7,7 @@ export default function Navbar() {
     "icons/black/whatsapp.png",
     "icons/black/phone-call.png",
     "icons/black/mail.png",
-    "icons/black/google-forms.png",
+    // "icons/black/google-forms.png",
   ];
   const NavTexts = ["Whatsapp", "Call", "E-Mail", "Form"];
   const NavLinks = [

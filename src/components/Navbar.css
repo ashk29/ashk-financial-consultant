@@ -57,6 +57,24 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  position: relative;
+}
+
+.nav-item::after {
+  content: ""; /* Empty content to create the line */
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 0; /* Start with no width */
+  height: 2px; /* Thickness of the underline */
+  background-color: black; /* Color of the underline */
+  transition: width 0.3s ease; /* Smooth width animation */
+}
+
+
+
+.nav-item:hover::after{
+  width: 100%;;
 }
 
 .icons {
